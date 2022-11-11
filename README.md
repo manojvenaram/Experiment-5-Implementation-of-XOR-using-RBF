@@ -38,10 +38,6 @@ The RBF of hidden neuron as gaussian function
 ```
 import numpy as np
 import matplotlib.pyplot as plt
-import tensorflow as tf
-from tensorflow.keras.initializers import Initializer
-from tensorflow.keras.layers import Layer
-from tensorflow.keras.initializers import RandomUniform, Initializer, Constant
 def gaussian_rbf(x, landmark, gamma=1):
     return np.exp(-gamma * np.linalg.norm(x - landmark)**2)
 def end_to_end(X1, X2, ys, mu1, mu2):
